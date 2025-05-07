@@ -1,2 +1,11 @@
-# Spring-Boot-com-Persist-ncia
-Este projeto tem como objetivo criar uma API RESTful com Spring Boot e persistência de dados no banco Oracle SQL Developer, simulando um sistema de cadastro de brinquedos voltado para crianças de até 14 anos. A aplicação permite realizar operações básicas de Create (POST) e Read (GET) utilizando o Postman para testes dos endpoints.
+# 🌱 Spring Boot com Persistência
+
+Este projeto é uma API REST criada com **Spring Boot** e persistência de dados no **Oracle SQL Developer**. A aplicação permite cadastrar e consultar brinquedos voltados para crianças de até 14 anos, com testes realizados via **Postman**.
+
+---
+
+## 🚀 Funcionalidades
+
+- Criar brinquedos (`POST /brinquedos`)  
+- Listar brinquedos (`GET /brinquedos`)  
+- Persistência com JPA no banco Oracle
