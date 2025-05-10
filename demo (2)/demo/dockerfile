@@ -1,0 +1,23 @@
+# 1) Stage de build: vai compilar a aplicação com Maven
+FROM maven:3.8.5-openjdk-17-slim AS builder
+WORKDIR /app
+
+# Copia só o pom e o código-fonte para agilizar cache
+COPY pom.xml .
+COPY src ./src
+
+# Compila e empacota sem rodar testes
+RUN mvn clean package -DskipTests
+
+# 2) Stage de runtime: roda o JAR gerado
+FROM openjdk:17-slim
+WORKDIR /app
+
+# Copia o JAR do builder (assume que só há um .jar em target)
+COPY --from=builder /app/target/*.jar app.jar
+
+# Expõe a porta padrão do Spring Boot
+EXPOSE 8080
+
+# Comando para iniciar a aplicação
+ENTRYPOINT ["java","-jar","app.jar"]
