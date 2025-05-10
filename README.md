@@ -41,4 +41,4 @@ curl --location 'http://localhost:8080/brinquedos' \
   "preco": 19.99
 }'
 
-![Configuração Spring Boot Initialzr](caminho/para/imagem.png)
+![Configuração Spring Boot Initialzr]("C:\Users\assis\OneDrive\Documentos\Lightshot\Print_Springini.png")
